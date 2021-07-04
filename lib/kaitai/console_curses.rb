@@ -2,6 +2,10 @@ require 'curses'
 
 module Kaitai
   class ConsoleCurses
+    def self.ctrl(key)
+      key[0].ord & 0x1f
+    end
+
     def initialize
       Curses.init_screen
       Curses.start_color
@@ -143,6 +147,15 @@ module Kaitai
       Curses::Key::NPAGE => :pg_dn,
       Curses::Key::HOME => :home,
       Curses::Key::END => :end,
+      # Vim keys
+      ?\h => :left_arrow,
+      ?\j => :down_arrow,
+      ?\k => :up_arrow,
+      ?\l => :right_arrow,
+      ?\g => :home,
+      ?\G => :end,
+      ctrl('d') => :pg_dn,
+      ctrl('u') => :pg_up,
     }.freeze
   end
 end

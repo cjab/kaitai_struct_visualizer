@@ -1,4 +1,14 @@
 {
+  curses = {
+    groups = ["default"];
+    platforms = [];
+    source = {
+      remotes = ["https://rubygems.org"];
+      sha256 = "0j00s12wn9ai2qinbmzak6v0173cldqllnzs2s2id7gl45py2s75";
+      type = "gem";
+    };
+    version = "1.4.2";
+  };
   kaitai-struct = {
     groups = ["default"];
     platforms = [];

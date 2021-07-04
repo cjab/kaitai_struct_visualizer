@@ -1,12 +1,14 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    curses (1.4.2)
     kaitai-struct (0.9)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  curses
   kaitai-struct
 
 BUNDLED WITH
